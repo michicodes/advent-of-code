@@ -1,0 +1,31 @@
+{
+  "name": "advent-of-code-2021",
+  "version": "1.0.0",
+  "description": "https://adventofcode.com/",
+  "main": "index.js",
+  "scripts": {
+    "day1": "node src/day1",
+    "format": "npx prettier --write .",
+    "test": "jest",
+    "watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michicodes/advent-of-code.git"
+  },
+  "keywords": [
+    "advent",
+    "code",
+    "js"
+  ],
+  "author": "michi.codes",
+  "bugs": {
+    "url": "https://github.com/michicodes/advent-of-code/issues"
+  },
+  "homepage": "https://github.com/michicodes/advent-of-code#readme",
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "jest": "^27.4.3",
+    "prettier": "2.5.0"
+  }
+}
