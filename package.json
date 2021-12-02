@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "aocrunner day",
-    "format": "standard --fix"
+    "format": "standard --fix",
+    "standard": "standard"
   },
   "keywords": [
     "aoc"
