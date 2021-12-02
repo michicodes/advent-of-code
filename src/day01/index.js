@@ -1,6 +1,6 @@
-import run from "aocrunner"
+import run from 'aocrunner'
 
-const parseInput = (rawInput) => rawInput.split("\n").map((n) => Number(n))
+const parseInput = (rawInput) => rawInput.split('\n').map((n) => Number(n))
 
 const part1 = (rawInput) => {
   const sonar = parseInput(rawInput)
@@ -8,7 +8,7 @@ const part1 = (rawInput) => {
     return 0
   }
   return sonar.filter(
-    (scanpoint, index, scanpoints) => scanpoint > scanpoints[index - 1],
+    (scanpoint, index, scanpoints) => scanpoint > scanpoints[index - 1]
   ).length
 }
 
@@ -43,10 +43,10 @@ run({
                 269
                 260
                 263`,
-        expected: 7,
-      },
+        expected: 7
+      }
     ],
-    solution: part1,
+    solution: part1
   },
   part2: {
     tests: [
@@ -61,10 +61,10 @@ run({
                 269
                 260
                 263`,
-        expected: 5,
-      },
+        expected: 5
+      }
     ],
-    solution: part2,
+    solution: part2
   },
-  trimTestInputs: true,
+  trimTestInputs: true
 })

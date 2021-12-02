@@ -1,6 +1,6 @@
-import run from "aocrunner"
+import run from 'aocrunner'
 
-const parseInput = (rawInput) => rawInput.split("\n")
+const parseInput = (rawInput) => rawInput.split('\n')
 
 const part1 = (rawInput) => {
   const lines = parseInput(rawInput)
@@ -8,16 +8,16 @@ const part1 = (rawInput) => {
   let distance = 0
 
   lines.forEach((singleDiveInstruction) => {
-    const [direction, value] = singleDiveInstruction.split(" ")
-    if (direction === "down") {
+    const [direction, value] = singleDiveInstruction.split(' ')
+    if (direction === 'down') {
       depth += Number(value)
     }
 
-    if (direction === "up") {
+    if (direction === 'up') {
       depth -= Number(value)
     }
 
-    if (direction === "forward") {
+    if (direction === 'forward') {
       distance += Number(value)
     }
   })
@@ -33,14 +33,14 @@ const part2 = (rawInput) => {
   let aim = 0
 
   lines.forEach((singleDiveInstruction) => {
-    const [direction, value] = singleDiveInstruction.split(" ")
-    if (direction === "down") {
+    const [direction, value] = singleDiveInstruction.split(' ')
+    if (direction === 'down') {
       aim += Number(value)
     }
-    if (direction === "up") {
+    if (direction === 'up') {
       aim -= Number(value)
     }
-    if (direction === "forward") {
+    if (direction === 'forward') {
       distance += Number(value)
       depth += aim * Number(value)
     }
@@ -59,10 +59,10 @@ forward 8
 up 3
 down 8
 forward 2`,
-        expected: 150,
-      },
+        expected: 150
+      }
     ],
-    solution: part1,
+    solution: part1
   },
   part2: {
     tests: [
@@ -73,10 +73,10 @@ forward 8
 up 3
 down 8
 forward 2`,
-        expected: 900,
-      },
+        expected: 900
+      }
     ],
-    solution: part2,
+    solution: part2
   },
-  trimTestInputs: true,
+  trimTestInputs: true
 })
