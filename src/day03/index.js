@@ -16,9 +16,21 @@ const part1 = (rawInput) => {
 
 const part2 = (rawInput) => {
   const matrix = parseInput(rawInput)
-  const bla = _.zip(...matrix)
 
-  console.log(bla)
+  const mostCommon = (matrix, depth) => ((_.zip(...matrix)[depth].filter(Boolean).length) >= (matrix.length / 2))
+  const leastCommon = (matrix, depth) => !mostCommon(matrix, depth)
+
+  const filterDown = filterPredicate => (matrix, depth = 0) => {
+    if (matrix.length === 1) {
+      return matrix[0]
+    }
+    return filterDown(filterPredicate)(matrix.filter(line => line[depth] == filterPredicate(matrix, depth)), ++depth)
+  }
+
+  const oxygenGeneratorRating = toHex(filterDown(mostCommon)(matrix))
+  const co2ScrubberRating = toHex(filterDown(leastCommon)(matrix))
+
+  return oxygenGeneratorRating * co2ScrubberRating
 }
 
 run({
