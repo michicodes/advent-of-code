@@ -36,13 +36,13 @@
         "solved": true,
         "result": "4103154",
         "attempts": [],
-        "time": 2.62
+        "time": 2.72
       },
       "part2": {
         "solved": true,
         "result": "4245351",
         "attempts": [],
-        "time": 397.12
+        "time": 387.1
       }
     },
     {
@@ -50,13 +50,13 @@
         "solved": true,
         "result": "10374",
         "attempts": [],
-        "time": 17.92
+        "time": 19.31
       },
       "part2": {
-        "solved": false,
-        "result": null,
+        "solved": true,
+        "result": "24742",
         "attempts": [],
-        "time": null
+        "time": 27.95
       }
     },
     {
