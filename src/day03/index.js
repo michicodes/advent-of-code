@@ -24,7 +24,7 @@ const part2 = (rawInput) => {
     if (matrix.length === 1) {
       return matrix[0]
     }
-    return filterDown(filterPredicate)(matrix.filter(line => line[depth] == filterPredicate(matrix, depth)), ++depth)
+    return filterDown(filterPredicate)(matrix.filter(line => line[depth] == filterPredicate(matrix, depth)), ++depth) // eslint-disable-line
   }
 
   const oxygenGeneratorRating = toHex(filterDown(mostCommon)(matrix))
