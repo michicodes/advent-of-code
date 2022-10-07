@@ -14,7 +14,7 @@
   "author": "Michael Weilbächer",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^16.11.12",
+    "@types/node": "^18.8.3",
     "aocrunner": "^1.6.0",
     "standard": "^16.0.4"
   },
